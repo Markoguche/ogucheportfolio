@@ -4,8 +4,35 @@ import { motion } from "framer-motion";
 import { ScrollReveal, TextReveal } from "../components/Motion";
 
 const projects = [
+  
   {
     number: "01",
+    title: "ServeLead Global Website",
+    category: "Corporate · Marketing",
+    description:
+      "Rebuilt the company website from the ground up with cinematic scroll animations, GSAP-powered transitions, and fully responsive layouts. Achieved top Core Web Vitals scores post-launch.",
+    image: "/projects/project3.png",
+    tags: ["Next js", "GSAP", "Tailwind CSS"],
+    link: "https://serveleadglobal.net",
+    github: "https://github.com/Markoguche/SLG",
+    accent: "#f59e0b",
+  },
+
+  {
+    number: "02",
+    title: "Global Mentorship Platform",
+    category: "SaaS · Marketplace",
+    description:
+      "Matchmaking web app enabling startup founders to connect with industry mentors. Integrated Paystack for paid sessions, built with TypeScript and React for full type safety and scalable architecture.",
+    image: "/projects/project2.png",
+    tags: ["React", "TypeScript", "Paystack API"],
+    link: "https://mentorship.serveleadglobal.net/",
+    github: "https://github.com/Markoguche/GlobalMentorship",
+    accent: "#7c3aed",
+  },
+
+  {
+    number: "03",
     title: "NINTV Community Portal",
     category: "Community · Web App",
     description:
@@ -16,30 +43,7 @@ const projects = [
     github: "https://github.com/Markoguche/IgboUnion",
     accent: "#00c4b8",
   },
-  {
-    number: "02",
-    title: "Global Mentorship Platform",
-    category: "SaaS · Marketplace",
-    description:
-      "Matchmaking web app enabling startup founders to connect with industry mentors. Integrated Paystack for paid sessions, built with TypeScript and React for full type safety and scalable architecture.",
-    image: "/projects/project2.png",
-    tags: ["React", "TypeScript", "Paystack API"],
-    link: "https://globalmentorship-program.vercel.app/",
-    github: "https://github.com/Markoguche/GlobalMentorship",
-    accent: "#7c3aed",
-  },
-  {
-    number: "03",
-    title: "ServeLead Global Website",
-    category: "Corporate · Marketing",
-    description:
-      "Rebuilt the company website from the ground up with cinematic scroll animations, GSAP-powered transitions, and fully responsive layouts. Achieved top Core Web Vitals scores post-launch.",
-    image: "/projects/project3.png",
-    tags: ["React", "GSAP", "Tailwind CSS"],
-    link: "https://serveleadglobal.vercel.app/",
-    github: "https://github.com/Markoguche/ServeLead-Global",
-    accent: "#f59e0b",
-  },
+
   {
     number: "04",
     title: "Respectech Website",
