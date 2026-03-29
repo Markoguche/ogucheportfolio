@@ -20,7 +20,7 @@ const projects = [
 
   {
     number: "02",
-    title: "Global Mentorship Platform",
+    title: "Global Mentorship Program",
     category: "SaaS · Marketplace",
     description:
       "Matchmaking web app enabling startup founders to connect with industry mentors. Integrated Paystack for paid sessions, built with TypeScript and React for full type safety and scalable architecture.",
