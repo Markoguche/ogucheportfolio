@@ -130,11 +130,20 @@ const ProjectCard = ({
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 w-9 h-9 rounded-lg glass border border-border-bright flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all"
+              className="
+                shrink-0 
+                flex items-center gap-2
+                px-3 py-2
+                md:w-9 md:h-9 md:p-0 md:justify-center
+                rounded-lg glass border border-border-bright
+                text-muted-foreground hover:text-primary hover:border-primary/30
+                transition-all
+              "
               whileHover={{ rotate: 15, scale: 1.1 }}
               aria-label={`Visit ${project.title}`}
-            >
+              >
               <ArrowUpRight className="w-4 h-4" />
+              <span className="text-sm md:hidden">Live Site</span>
             </motion.a>
           </div>
 
