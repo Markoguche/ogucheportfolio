@@ -141,7 +141,7 @@ const ProjectCard = ({
               "
               whileHover={{ rotate: 15, scale: 1.1 }}
               aria-label={`Visit ${project.title}`}
-              >
+            >
               <ArrowUpRight className="w-4 h-4" />
               <span className="text-sm md:hidden">Live Site</span>
             </motion.a>

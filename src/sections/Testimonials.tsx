@@ -1,30 +1,29 @@
 // src/sections/Testimonials.tsx
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote, User } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Magnetic, ScrollReveal } from "../components/Motion";
 
 const testimonials = [
+  
+  {
+    quote: "Working with Mark was a game changer for our group of companies. He took our Figma designs and brought them to life in a way that exceeded every expectation, pixel-perfect, smooth, and ahead of schedule. Rare talent.",
+    author: "Ijeoma Aladesaye",
+    role: "Group CEO, ServeLead Global",
+    company: "ServeLead Global",
+  },
+  
   {
     quote: "Mark is one of the most talented frontend engineers I've worked with. His ability to translate complex UI designs into functional code is unmatched. He brought our vision to life with speed and precision.",
-    author: "Chinedu Okafor",
-    role: "Product Manager, Paystack",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-    company: "Paystack",
+    author: "Daniel Bowman",
+    role: "COO, RescueTap",
+    company: "RescueTap",
   },
+  
   {
-    quote: "Working with Mark was a game-changer for our agency. He took our Figma designs and brought them to life in a way that exceeded every expectation — pixel-perfect, smooth, and ahead of schedule. Rare talent.",
-    author: "Amaka Obi",
-    role: "Creative Director, Noir Studios Lagos",
-    avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop",
-    company: "Noir Studios",
-  },
-  {
-    quote: "Mark has a unique ability to bridge the gap between design vision and engineering reality. He built our entire mentorship platform in React — clean code, great UX, zero rework. Would hire again without hesitation.",
-    author: "Adaeze Nwosu",
-    role: "Founder, GlobalMentorship",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop",
-    company: "GlobalMentorship",
+    quote: "Mark has a unique ability to bridge the gap between design vision and engineering reality. He rebuilt our entire website platform in React with clean code, great UX, and zero rework. Would hire again without hesitation.",    author: "Joshua Onoja",
+    role: "CEO, Respectech HR",
+    company: "Respectech HR",
   },
 ];
 
@@ -90,11 +89,10 @@ export const Testimonials = () => {
               </blockquote>
 
               <figcaption className="flex items-center gap-4">
-                <img
-                  src={testimonials[active].avatar}
-                  alt={testimonials[active].author}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
-                />
+                {/* Replaced img with Icon Avatar */}
+                <div className="w-14 h-14 rounded-full border-2 border-primary/20 bg-primary/10 flex items-center justify-center">
+                  <User className="w-6 h-6 text-primary" />
+                </div>
                 <div>
                   <cite className="not-italic font-display font-semibold text-foreground block">
                     {testimonials[active].author}
