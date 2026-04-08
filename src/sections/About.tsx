@@ -26,28 +26,30 @@ const values = [
   },
 ];
 
+// Removed 'level' property as all bars will be full
 const skills = [
-  { name: "React / Next.js", level: 95 },
-  { name: "TypeScript", level: 88 },
-  { name: "Tailwind CSS", level: 92 },
-  { name: "Framer Motion / GSAP", level: 85 },
-  { name: "API Integration", level: 80 },
-  { name: "Performance Optimization", level: 82 },
+  { name: "React / Next.js" },
+  { name: "TypeScript" },
+  { name: "Tailwind CSS" },
+  { name: "Framer Motion / GSAP" },
+  { name: "API Integration" },
+  { name: "Performance Optimization" },
 ];
 
-const SkillBar = ({ name, level, delay }: { name: string; level: number; delay: number }) => (
+// Updated SkillBar: removed percentage display, set width to 100%
+const SkillBar = ({ name, delay }: { name: string; delay: number }) => (
   <ScrollReveal delay={delay}>
     <div className="space-y-2">
       <div className="flex items-center justify-between text-sm">
         <span className="font-medium text-foreground">{name}</span>
-        <span className="font-mono-dm text-primary text-xs">{level}%</span>
+        {/* Percentage text removed */}
       </div>
       <div className="h-1.5 bg-border rounded-full overflow-hidden">
         <motion.div
           className="h-full rounded-full"
           style={{ background: "linear-gradient(90deg, #00c4b8, #7c3aed)" }}
           initial={{ width: 0 }}
-          whileInView={{ width: `${level}%` }}
+          whileInView={{ width: "100%" }} // Always fills to 100%
           viewport={{ once: true }}
           transition={{ duration: 1.2, delay, ease: [0.22, 1, 0.36, 1] }}
         />
@@ -106,7 +108,7 @@ export const About = () => {
             {/* Skill bars */}
             <div className="space-y-4 pt-4">
               {skills.map((s, i) => (
-                <SkillBar key={s.name} {...s} delay={i * 0.08} />
+                <SkillBar key={s.name} name={s.name} delay={i * 0.08} />
               ))}
             </div>
           </div>

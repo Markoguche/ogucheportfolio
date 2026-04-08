@@ -75,7 +75,7 @@ const ProjectCard = ({
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
         {/* Image */}
-        <div className="relative overflow-hidden aspect-[16/9]">
+        <div className="relative overflow-hidden aspect-video">
           <img
             src={project.image}
             alt={`${project.title} screenshot`}
